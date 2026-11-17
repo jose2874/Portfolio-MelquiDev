@@ -13,78 +13,170 @@ const projects = [
     <!-- PORTAFOLIO ORIGINAL -->
     <div class="site-shell">
         <header class="nav-wrap">
-            <a class="wordmark" href="/" aria-label="Volver al inicio">M<span>.</span></a>
+            <a class="wordmark" href="/" aria-label="Volver al inicio">
+                <img src="/favicon.png" alt="Volver al inicio" />
+            </a>
             <nav aria-label="Navegación principal">
-                <a href="#work">Trabajo</a>
-                <a href="#about">Sobre mí</a>
-                <a href="#contact">Contacto</a>
+                <a href="#work" data-i18n="navWork">Trabajo</a>
+                <a href="#technologies" data-i18n="navStack">Stack</a>
+                <a href="#about" data-i18n="navAbout">Sobre mí</a>
+                <a href="#contact" data-i18n="navContact">Contacto</a>
             </nav>
+            <button class="language-switcher" id="language-switcher" type="button" aria-label="Cambiar idioma">
+                <span class="language-option language-option--active" data-language="es">ES</span>
+                <span aria-hidden="true">/</span>
+                <span class="language-option" data-language="en">EN</span>
+            </button>
         </header>
         <main id="top">
             <section class="hero section-pad">
                 <div class="hero-kicker">
-                    <span>Hey, soy Melqui.</span>
+                    <span data-i18n="heroGreeting">Hey, soy Melqui.</span>
                     <span class="availability"><i></i>Barcelona · ES</span>
                 </div>
                 <div class="hero-content">
-                    <p class="eyebrow">Desarrollador Full Stack</p>
+                    <p class="eyebrow" data-i18n="heroEyebrow">Desarrollador Full Stack</p>
                     <div class="hero-heading">
-                      <h1>Desarrollo ideas<br /><em>que se sienten.</em></h1>
+                      <h1 data-i18n="heroTitle">Desarrollo ideas<br /><em>que se sienten.</em></h1>
                       <img class="hero-avatar" src={avatar.src} alt="Retrato de Melqui Cabezas Canales" width="200" height="200" />
                     </div>
                     <div class="hero-bottom">
-                        <p class="intro">Desarrollador web multidisciplinario, creando nuevas ideas.</p>
+                        <p class="intro" data-i18n="heroIntro">Desarrollador web multidisciplinario, creando nuevas ideas.</p>
                         <a class="circle-link" href="#work" aria-label="Ver selección de trabajo"><span>↓</span></a>
                     </div>
                 </div>
                 <div class="hero-stamp" aria-hidden="true">
-                    <span>Ideas</span><span>con</span><span>intención</span>
+                    <span data-i18n="heroStamp">Ideas</span><span data-i18n="heroStampWith">con</span><span data-i18n="heroStampIntent">intención</span>
                 </div>
             </section>
         </main>
     </div>
 
 
-    <!-- HAML CONVERTIDO A HTML -->
-    <div id="wrap">
-        <h1 data-splitting="words" id="work">Proyectos</h1>
-        <p class="subhead">Melqui Cabezas Canales</p>
-        
+    <section id="wrap">
+        <h1 data-splitting="words" id="work" data-i18n="projectsTitle">Proyectos</h1>
+        <p class="subhead" data-i18n="projectsSubtitle">Melqui Cabezas Canales</p>
+
         <div class="panel">
             <h2 class="dark" data-splitting="words">3D CSS Letter Transition</h2>
             <div class="thumb">
                 <p>CSS • 3D • Animation</p>
                 <div class="inner">
-                    <img class="invert" loading="lazy" src="https://avatars.githubusercontent.com/u/78500916?s=400&u=9188a3dbd35bae4b0d14de9f6cf08fbe89a414ec&v=4" />
+                    <img class="invert" loading="lazy" src="https://avatars.githubusercontent.com/u/78500916?s=400&u=9188a3dbd35bae4b0d14de9f6cf08fbe89a414ec&v=4" alt="Vista previa del proyecto 3D CSS Letter Transition" />
                 </div>
             </div>
         </div>
-        
+
         <div class="panel">
-            <h2 data-splitting="words">Generative Patterns 8</h2>
+            <h2 data-splitting="words">WEB PAGE PRONIC.SL</h2>
             <div class="thumb">
-                <p>Generative • CSS Vars • GSAP</p>
-                <div class="inner">
-                    <img class="light" loading="lazy" src="https://assets.codepen.io/383755/internal/screenshots/pens/wvGyKEY.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1599706499&width=960" />
-                </div>
+                <p>Astro • CSS • JavaScript • TypeScript</p>
+                <a class="inner" href="https://pronicbcn.com" target="_blank" rel="noreferrer" data-external-url="https://pronicbcn.com" aria-label="Visitar PRONIC.SL">
+                    <img class="light" loading="lazy" src="https://pronicbcn.com" alt="Vista previa del proyecto Generative Patterns 8" />
+                </a>
             </div>
         </div>
-        
+
         <div class="panel">
             <h2 data-splitting="words">NES Subscribe</h2>
             <div class="thumb">
                 <p>8-Bit • Form Input • Animation</p>
                 <div class="inner">
-                    <img loading="lazy" src="https://assets.codepen.io/383755/internal/screenshots/pens/OJVJJoj.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1569360312&width=960" />
+                    <img loading="lazy" src="https://assets.codepen.io/383755/internal/screenshots/pens/OJVJJoj.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1569360312&width=960" alt="Vista previa del proyecto NES Subscribe" />
                 </div>
             </div>
         </div>
-        <p class="subhead final">Fin</p>
-    </div>
+        <p class="subhead final" data-i18n="projectsEnd">Fin</p>
+    </section>
 
-    <div class="hero-heading" id="about">
-                      <h1>Sobre<br /><em>Mi</em></h1>
-    </div>
+    <section id="technologies" class="album-carousel" aria-labelledby="technologies-title">
+        <h1 id="technologies-title" data-i18n="stackTitle">Stack</h1>
+        <div class="boxes" aria-label="Carrusel de proyectos">
+            <article class="box" style="--src: url('https://i.scdn.co/image/ab67616d00001e020ecc8c4fd215d9eb83cbfdb3')">
+                <span>1</span>
+                <img src="https://tse2.mm.bing.net/th/id/OIP.Iib-jIfgOw8ujHiBj96s5AHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Portada del proyecto 1" />
+            </article>
+            <article class="box" style="--src: url('https://i.scdn.co/image/ab67616d00001e02d9194aa18fa4c9362b47464f')">
+                <span>2</span>
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/12/372259284/XC/QB/LE/64185218/python-course-500x500.png" alt="Portada del proyecto 2" />
+            </article>
+            <article class="box" style="--src: url('https://i.scdn.co/image/ab67616d00001e02a7ea08ab3914c5fb2084a8ac')">
+                <span>3</span>
+                <img src="https://thetechnologyvault.com/wp-content/uploads/2023/05/java-programming-language.jpg" alt="Portada del proyecto 3" />
+            </article>
+            <article class="box" style="--src: url('https://i.scdn.co/image/ab67616d00001e0213ca80c3035333e5a6fcea59')">
+                <span>4</span>
+                <img src="https://travanleo.com/wp-content/uploads/2025/10/FastAPI-1.webp" alt="Portada del proyecto 4" />
+            </article>
+            <article class="box" style="--src: url('https://i.scdn.co/image/ab67616d00001e02df04e6071763615d44643725')">
+                <span>5</span>
+                <img src="https://appinventors.com/blog/wp-content/uploads/2025/04/git-github-gitlab.webp" alt="Portada del proyecto 5" />
+            </article>
+            <article class="box" style="--src: url('https://i.scdn.co/image/ab67616d00001e0239c7302c04f8d06f60e14403')">
+                <span>6</span>
+                <img src="https://petri.com/wp-content/uploads/petri-imported-images/docker-logo.png" alt="Portada del proyecto 6" />
+            </article>
+            <article class="box" style="--src: url('https://i.scdn.co/image/ab67616d00001e021c0bcf8b536295438d26c70d')">
+                <span>7</span>
+                <img src="https://i.scdn.co/image/ab67616d00001e021c0bcf8b536295438d26c70d" alt="Portada del proyecto 7" />
+            </article>
+        </div>
+        <div class="controls">
+            <button class="next" type="button" aria-label="Proyecto anterior" data-i18n-aria="previousProject">
+                <span data-i18n="previousProject">Proyecto anterior</span>
+                <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" /></svg>
+            </button>
+            <button class="prev" type="button" aria-label="Proyecto siguiente" data-i18n-aria="nextProject">
+                <span data-i18n="nextProject">Proyecto siguiente</span>
+                <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" /></svg>
+            </button>
+        </div>
+        <div class="drag-proxy" aria-hidden="true"></div>
+    </section>
+
+    <section id="about" class="about section-pad">
+        <div class="section-heading">
+            <span data-i18n="aboutLabel">02 / Sobre mí</span>
+            <span data-i18n="aboutSummary">Experiencia y formación</span>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-copy">
+                <h2 data-i18n="aboutTitle">Sobre<br /><em>mí</em></h2>
+                <p data-i18n="aboutIntro">
+                    Actualmente trabajo como desarrollador Full Stack en el
+                    Sincrotrón Alba, desarrollando aplicaciones web internas
+                    con Django, Jira, Git, Kubernetes y Docker.
+                </p>
+            </div>
+
+            <div class="about-details">
+                <article>
+                    <span data-i18n="experienceLabel">Experiencia</span>
+                    <h3>Sincrotrón Alba</h3>
+                    <p data-i18n="fullStackRole">Desarrollador Full Stack</p>
+                    <p>Django · Jira · Git · Kubernetes · Docker</p>
+                </article>
+
+                <article>
+                    <h3>PC Audit</h3>
+                    <p data-i18n="pcAuditDescription">
+                        Participación y configuración de sistemas informáticos,
+                        además de auditoría de productos con Workbench.
+                    </p>
+                </article>
+
+                <article>
+                    <span data-i18n="educationLabel">Formación</span>
+                    <h3>La Ferreria</h3>
+                    <p data-i18n="ferreriaDescription">Actualmente cursando CFGS en Desarrollo de Aplicaciones Web (DAW).</p>
+
+                    <h3>Escola del Treball</h3>
+                    <p data-i18n="escolaDescription">2023–2026 · CFGM en Sistemas Microinformáticos y Redes (SMR).</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
     <div id="frame">
         <div id="close">
@@ -114,18 +206,21 @@ const projects = [
                 <path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm900 1108c-66 30-137 49-212 58 76-46 135-118 162-204-71 42-151 73-234 90-68-72-163-116-270-116-204 0-369 165-369 369 0 29 3 57 9 84-307-16-579-162-761-386-33 56-50 120-50 186 0 128 65 241 164 307-61-2-117-19-167-46v5c0 179 127 328 296 362-31 8-64 13-97 13-24 0-47-2-70-7 47 147 183 253 345 257-127 99-285 158-459 158-30 0-59-2-88-5 164 105 358 166 566 166 679 0 1051-563 1051-1051 0-16 0-32-1-48 72-52 135-117 184-191z"></path>
             </svg>
         </a>
-        <a href="https://codepen.io/cobra_winfrey" target="_blank">
-            <svg class="svg-inline--fa fa-codepen fa-w-16 fa-3x" aria-hidden="true" data-icon="codepen" data-prefix="fab" focusable="false" role="img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                <path d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z" fill="currentColor"></path>
+        <a href="https://github.com/jose2874" target="_blank">
+            <svg class="fa-brands fa-github" aria-hidden="true" data-icon="github" data-prefix="fab" focusable="false" role="img" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"></path>
             </svg>
         </a>
     </div>
+
+    <!-- PROBA GSAP -->
+
     <!-- Esto es el card de abajo del todo -->
     <section class="contact section-pad" id="contact">
                 <div class="contact-top">
-                    <p class="eyebrow">03 / Contacto</p>
+                    <p class="eyebrow" data-i18n="contactLabel">03 / Contacto</p>
                 </div>
-                <h2>Hagamos algo<br /><em>con sentido.</em></h2>
+                <h2 data-i18n="contactTitle">Hagamos algo<br /><em>con sentido.</em></h2>
                 <a class="contact-email" href="mailto:melquicabezas97@gmail.com">melquicabezas97@gmail.com <span>↗</span></a>
             </section>
 
@@ -148,11 +243,15 @@ const projects = [
 .site-shell { overflow: hidden; } 
 .section-pad, .nav-wrap, footer { max-width: 1280px; margin: 0 auto; padding-left: clamp(24px, 5vw, 76px); padding-right: clamp(24px, 5vw, 76px); }
 .nav-wrap { height: 92px; display: flex; align-items: center; justify-content: space-between; font-size: 13px; } 
-.wordmark { color: #20201d; font-family: 'Playfair Display', serif; font-size: 34px; text-decoration: none; line-height: 1; } 
-.wordmark span { color: #3fe5c9; } 
-nav { display: flex; gap: clamp(20px, 3vw, 46px); margin-left: 10%; position: fixed;} 
+.wordmark { display: block; color: #20201d; text-decoration: none; line-height: 1; } 
+.wordmark img { display: block; width: 42px; height: 42px; object-fit: contain; } 
+nav { display: flex; gap: clamp(20px, 3vw, 46px); margin-left: 10%;} 
 nav a, .availability, footer a { color: #20201d; text-decoration: none;} 
 nav a:hover, footer a:hover { color: #e5593f; } 
+.language-switcher { display: inline-flex; gap: 7px; align-items: center; margin-left: auto; border: 0; padding: 8px 0 8px 20px; background: transparent; color: #77736d; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .04em; cursor: pointer; }
+.language-option { transition: color .2s ease; }
+.language-option--active { color: #e5593f; }
+.language-switcher:hover .language-option--active, .language-switcher:focus-visible .language-option--active { color: #20201d; }
 .availability { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .04em; text-transform: uppercase; } 
 .availability i { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: #e5593f; }
 .hero { min-height: calc(100vh - 92px); position: relative; padding-top: clamp(55px, 11vh, 130px); padding-bottom: 70px; } 
@@ -181,7 +280,7 @@ nav a:hover, footer a:hover { color: #e5593f; }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 100px 28px; } 
 .project--wide { grid-column: span 2; max-width: 820px; } 
 .project--tall { margin-top: 100px; } 
-.thumb p {color: #77736d; font-size: 12px; line-height: 1.5; }
+.thumb p {color: #094ce7; font-size: 12px; line-height: 1.5; }
 .project-image { position: relative; display: block; overflow: hidden; background: #ddd5ca; aspect-ratio: 1.35; } 
 .project--wide .project-image { aspect-ratio: 2.05; } 
 .project--tall .project-image { aspect-ratio: .88; } 
@@ -199,6 +298,11 @@ nav a:hover, footer a:hover { color: #e5593f; }
 .about-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 10%; margin-top: 90px; } 
 .about-copy { max-width: 420px; padding-top: 8px; } 
 .about-copy p { margin: 0 0 22px; color: #68645e; font-size: 17px; line-height: 1.65; } 
+.about-details { display: grid; gap: 42px; }
+.about-details article { border-top: 1px solid #cfc8bd; padding-top: 16px; }
+.about-details article > span { color: #e5593f; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+.about-details h3 { margin: 14px 0 6px; font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 500; }
+.about-details p { margin: 0 0 7px; color: #68645e; font-size: 14px; line-height: 1.55; }
 .text-link { display: inline-flex; gap: 20px; margin-top: 25px; border-bottom: 1px solid #20201d; padding-bottom: 8px; color: #20201d; font-size: 14px; text-decoration: none; } 
 .text-link span { color: #e5593f; }
 .contact { padding-top: 90px; padding-bottom: 115px; background: #20201d; color: #f2eee7; } 
@@ -214,6 +318,7 @@ footer a { color: #99958e; }
 @media (max-width: 700px) { 
     .nav-wrap { height: 76px; } 
     .nav-wrap nav { display: none; } 
+    .language-switcher { padding-left: 0; }
     .availability { font-size: 9px; } 
     .hero { min-height: 660px; padding-top: 38px; } 
     .hero-content { margin-top: 85px; } 
@@ -232,6 +337,7 @@ footer a { color: #99958e; }
     .project--wide .project-image, .project--tall .project-image { aspect-ratio: 1.1; } 
     .about { padding-top: 75px; padding-bottom: 100px; } 
     .about-copy { margin-top: 35px; } 
+    .about-details { margin-top: 55px; }
     .contact { padding-top: 65px; padding-bottom: 85px; } 
     .contact h2 { margin: 80px 0 45px; font-size: 18vw; } 
     footer { display: block; line-height: 2.3; } 
@@ -1160,6 +1266,15 @@ body {
           }
         }
       }
+      h2,
+      h2 span.word {
+        color: $g;
+        -webkit-text-fill-color: $g;
+        background: none;
+      }
+      h2 span.word:before {
+        display: none;
+      }
       &:nth-of-type(even) {
         .thumb {
           &:before {
@@ -1339,6 +1454,205 @@ body {
     color: #2f7d4a !important;
     -webkit-text-fill-color: #2f7d4a !important;
   }
+
+  body #technologies.album-carousel {
+    position: relative;
+    min-height: 2200px;
+    width: 100%;
+    max-width: none;
+    overflow: visible;
+    background: #1a1a1a;
+    transform: none;
+    color: #eee;
+  }
+
+  .album-carousel > h1 {
+    position: absolute;
+    z-index: 4;
+    top: 2rem;
+    left: 2rem;
+    margin: 0;
+    color: #eee !important;
+    -webkit-text-fill-color: #eee !important;
+    font-family: "Lexend Mega", sans-serif;
+    font-size: clamp(1.2rem, 3vw, 2.5rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .album-carousel .boxes {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    touch-action: none;
+  }
+
+  .album-carousel .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    width: 20vmin;
+    height: 20vmin;
+    min-width: 200px;
+    min-height: 200px;
+    transform-style: preserve-3d;
+    cursor: grab;
+    user-select: none;
+  }
+
+  .album-carousel .box:active {
+    cursor: grabbing;
+  }
+
+  .album-carousel .box:before,
+  .album-carousel .box:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) rotate(180deg) translate(0, -100%) translate(0, -0.5vmin);
+  }
+
+  .album-carousel .box:before {
+    z-index: 2;
+    background: linear-gradient(#1a1a1a 50%, transparent);
+    transform: translate(-50%, -50%) rotate(180deg) translate(0, -100%) translate(0, -0.5vmin) scale(1.01);
+  }
+
+  .album-carousel .box:after {
+    opacity: 0.75;
+    background-image: var(--src);
+    background-size: cover;
+  }
+
+  .album-carousel .box img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .album-carousel .box span {
+    position: absolute;
+    z-index: 3;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #fff;
+    font-size: 0.75rem;
+  }
+
+  .album-carousel .controls {
+    position: absolute;
+    z-index: 300;
+    top: calc(50% + clamp(200px, 20vmin, 20vmin));
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 20vmin;
+    min-width: 200px;
+    height: 44px;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  .album-carousel .controls button {
+    position: absolute;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    outline: transparent;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+
+  .album-carousel .controls button:first-of-type {
+    right: 100%;
+  }
+
+  .album-carousel .controls button:last-of-type {
+    left: 100%;
+  }
+
+  .album-carousel .controls button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    box-sizing: border-box;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    background: linear-gradient(#ccc8, #000) #000;
+    transform: translate(-50%, -50%);
+  }
+
+  .album-carousel .controls button:hover {
+    transform: translateY(-5%);
+  }
+
+  .album-carousel .controls button span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .album-carousel .controls button svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    height: 30%;
+    fill: #eee;
+    transform: translate(-50%, -50%) translate(2%, 0);
+  }
+
+  .album-carousel .controls button:first-of-type svg {
+    transform: translate(-50%, -50%) rotate(180deg) translate(2%, 0);
+  }
+
+  .album-carousel .scroll-icon {
+    position: fixed;
+    z-index: 300;
+    top: 1rem;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
+    color: #eee;
+    animation: album-scroll-hint 4s infinite;
+  }
+
+  .album-carousel .drag-proxy {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  @keyframes album-scroll-hint {
+    0%, 25%, 50%, 100% { transform: translate(0, 0); }
+    12.5%, 37.5% { transform: translate(0, 25%); }
+  }
+
+  @media (max-width: 600px) {
+    .album-carousel .controls {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
 </style>
 
 <!-- IMPORTS PARA LAS LIBRERIAS -->
@@ -1384,6 +1698,7 @@ for (let i = 0; i < cards.length; i++) {
   cards[i].addEventListener(
     "click",
     function (i) {
+      if (cards[i].dataset.externalUrl) return;
       body.classList.add("active");
       iframe.setAttribute("src", frames[i]);
       let penDebug = frames[i];
@@ -1489,4 +1804,233 @@ function refresh() {
 }
 
 window.addEventListener("resize", refresh);
+</script>
+
+<script>
+const translations = {
+  es: {
+    navWork: "Trabajo",
+    navStack: "Stack",
+    navAbout: "Sobre mí",
+    navContact: "Contacto",
+    heroGreeting: "Hey, soy Melqui.",
+    heroEyebrow: "Desarrollador Full Stack",
+    heroTitle: "Desarrollo ideas<br /><em>que se sienten.</em>",
+    heroIntro: "Desarrollador web multidisciplinario, creando nuevas ideas.",
+    heroStamp: "Ideas",
+    heroStampWith: "con",
+    heroStampIntent: "intención",
+    projectsTitle: "Proyectos",
+    projectsSubtitle: "Melqui Cabezas Canales",
+    projectsEnd: "Fin",
+    stackTitle: "Stack",
+    previousProject: "Proyecto anterior",
+    nextProject: "Proyecto siguiente",
+    aboutLabel: "02 / Sobre mí",
+    aboutSummary: "Experiencia y formación",
+    aboutTitle: "Sobre<br /><em>mí</em>",
+    aboutIntro: "Actualmente trabajo como desarrollador Full Stack en el Sincrotrón Alba, desarrollando aplicaciones web internas con Django, Jira, Git, Kubernetes y Docker.",
+    experienceLabel: "Experiencia",
+    fullStackRole: "Desarrollador Full Stack",
+    pcAuditDescription: "Participación y configuración de sistemas informáticos, además de auditoría de productos con Workbench.",
+    educationLabel: "Formación",
+    ferreriaDescription: "Actualmente cursando CFGS en Desarrollo de Aplicaciones Web (DAW).",
+    escolaDescription: "2023–2026 · CFGM en Sistemas Microinformáticos y Redes (SMR).",
+    contactLabel: "03 / Contacto",
+    contactTitle: "Hagamos algo<br /><em>con sentido.</em>"
+  },
+  en: {
+    navWork: "Work",
+    navStack: "Stack",
+    navAbout: "About me",
+    navContact: "Contact",
+    heroGreeting: "Hey, I'm Melqui.",
+    heroEyebrow: "Full Stack Developer",
+    heroTitle: "I develop ideas<br /><em>you can feel.</em>",
+    heroIntro: "Multidisciplinary web developer, creating new ideas.",
+    heroStamp: "Ideas",
+    heroStampWith: "with",
+    heroStampIntent: "intention",
+    projectsTitle: "Projects",
+    projectsSubtitle: "Melqui Cabezas Canales",
+    projectsEnd: "End",
+    stackTitle: "Stack",
+    previousProject: "Previous project",
+    nextProject: "Next project",
+    aboutLabel: "02 / About me",
+    aboutSummary: "Experience and education",
+    aboutTitle: "About<br /><em>me</em>",
+    aboutIntro: "I currently work as a Full Stack developer at ALBA Synchrotron, developing internal web applications with Django, Jira, Git, Kubernetes and Docker.",
+    experienceLabel: "Experience",
+    fullStackRole: "Full Stack Developer",
+    pcAuditDescription: "Participating in and configuring computer systems, as well as auditing products with Workbench.",
+    educationLabel: "Education",
+    ferreriaDescription: "Currently studying the Higher Technician Diploma in Web Application Development (DAW).",
+    escolaDescription: "2023–2026 · Intermediate Technician Diploma in Microcomputer Systems and Networks (SMR).",
+    contactLabel: "03 / Contact",
+    contactTitle: "Let's make something<br /><em>meaningful.</em>"
+  }
+};
+
+const languageSwitcher = document.getElementById("language-switcher");
+const languageOptions = document.querySelectorAll(".language-option");
+
+const setLanguage = language => {
+  const selectedLanguage = language === "en" ? "en" : "es";
+  const content = translations[selectedLanguage];
+
+  document.documentElement.lang = selectedLanguage;
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    const key = element.dataset.i18n;
+    if (key && content[key]) element.innerHTML = content[key];
+  });
+  document.querySelectorAll("[data-i18n-aria]").forEach(element => {
+    const key = element.dataset.i18nAria;
+    if (key && content[key]) element.setAttribute("aria-label", content[key]);
+  });
+  languageOptions.forEach(option => {
+    option.classList.toggle("language-option--active", option.dataset.language === selectedLanguage);
+  });
+  languageSwitcher?.setAttribute("aria-label", selectedLanguage === "es" ? "Cambiar idioma a inglés" : "Change language to Spanish");
+  localStorage.setItem("portfolio-language", selectedLanguage);
+};
+
+const savedLanguage = localStorage.getItem("portfolio-language");
+setLanguage(savedLanguage === "en" ? "en" : "es");
+
+languageSwitcher?.addEventListener("click", () => {
+  const activeLanguage = document.querySelector(".language-option--active")?.dataset.language;
+  setLanguage(activeLanguage === "es" ? "en" : "es");
+});
+</script>
+
+<script>
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Draggable } from "gsap/Draggable";
+
+gsap.registerPlugin(ScrollTrigger, Draggable);
+
+const boxes = gsap.utils.toArray(".album-carousel .box");
+const loop = gsap.timeline({ paused: true, repeat: -1, ease: "none" });
+const stagger = 0.1;
+const duration = 1;
+const shifts = [...boxes, ...boxes, ...boxes];
+
+gsap.set(boxes, { yPercent: -50 });
+
+shifts.forEach((box, index) => {
+  const boxTimeline = gsap.timeline()
+    .set(box, { xPercent: 250, rotateY: -50, opacity: 0, scale: 0.5 })
+    .to(box, { opacity: 1, scale: 1, duration: 0.1 }, 0)
+    .to(box, { opacity: 0, scale: 0.5, duration: 0.1 }, 0.9)
+    .fromTo(box, { xPercent: 250 }, {
+      xPercent: -350,
+      duration,
+      immediateRender: false,
+      ease: "power1.inOut"
+    }, 0)
+    .fromTo(box, { rotateY: -50 }, {
+      rotateY: 50,
+      duration,
+      immediateRender: false,
+      ease: "power4.inOut"
+    }, 0)
+    .to(box, { z: 100, scale: 1.25, duration: 0.1, repeat: 1, yoyo: true }, 0.4)
+    .fromTo(box, { zIndex: 1 }, {
+      zIndex: boxes.length,
+      duration: 0.5,
+      repeat: 1,
+      yoyo: true,
+      ease: "none",
+      immediateRender: false
+    }, 0);
+
+  loop.add(boxTimeline, index * stagger);
+});
+
+const cycleDuration = stagger * boxes.length;
+const loopHead = gsap.fromTo(loop, { totalTime: cycleDuration + duration * 0.5 }, {
+  totalTime: `+=${cycleDuration}`,
+  duration: 1,
+  ease: "none",
+  repeat: -1,
+  paused: true
+});
+const playhead = { position: 0 };
+const wrapPosition = gsap.utils.wrap(0, loopHead.duration());
+const scrub = gsap.to(playhead, {
+  position: 0,
+  paused: true,
+  duration: 0.25,
+  ease: "power3",
+  onUpdate: () => loopHead.totalTime(wrapPosition(playhead.position))
+});
+
+const trigger = ScrollTrigger.create({
+  trigger: ".album-carousel",
+  start: "top top",
+  end: "bottom bottom",
+  pin: ".album-carousel .boxes",
+  onUpdate: self => {
+    scrub.vars.position = self.progress * loopHead.duration();
+    scrub.invalidate().restart();
+  }
+});
+
+const snap = gsap.utils.snap(1 / boxes.length);
+const progressToScroll = progress => gsap.utils.clamp(
+  trigger.start + 1,
+  trigger.end - 1,
+  gsap.utils.clamp(0, 1, progress) * (trigger.end - trigger.start) + trigger.start
+);
+const scrollToPosition = position => {
+  const snappedPosition = gsap.utils.clamp(0, loopHead.duration(), snap(position));
+  const progress = snappedPosition / loopHead.duration();
+  trigger.scroll(progressToScroll(progress));
+};
+
+const next = () => scrollToPosition(scrub.vars.position - 1 / boxes.length);
+const previous = () => scrollToPosition(scrub.vars.position + 1 / boxes.length);
+
+document.addEventListener("keydown", event => {
+  if (event.code === "ArrowLeft" || event.code === "KeyA") next();
+  if (event.code === "ArrowRight" || event.code === "KeyD") previous();
+});
+
+document.querySelector(".album-carousel .next")?.addEventListener("click", next);
+document.querySelector(".album-carousel .prev")?.addEventListener("click", previous);
+document.querySelector(".album-carousel .boxes")?.addEventListener("click", event => {
+  const box = event.target.closest(".box");
+  if (!box) return;
+
+  const target = boxes.indexOf(box);
+  const current = gsap.utils.wrap(0, boxes.length, Math.floor(boxes.length * scrub.vars.position));
+  let bump = target - current;
+  if (target > current && target - current > boxes.length * 0.5) bump = (boxes.length - bump) * -1;
+  if (current > target && current - target > boxes.length * 0.5) bump = boxes.length + bump;
+  scrollToPosition(scrub.vars.position + bump * (1 / boxes.length));
+});
+
+gsap.set(".album-carousel .box", { display: "block" });
+gsap.set(".album-carousel button", { z: 200 });
+
+Draggable.create(".album-carousel .drag-proxy", {
+  type: "x",
+  trigger: ".album-carousel .box",
+  onPress() {
+    this.startOffset = scrub.vars.position;
+  },
+  onDrag() {
+    scrub.vars.position = gsap.utils.clamp(
+      0,
+      loopHead.duration(),
+      this.startOffset + (this.startX - this.x) * 0.001
+    );
+    scrub.invalidate().restart();
+  },
+  onDragEnd() {
+    scrollToPosition(scrub.vars.position);
+  }
+});
 </script>
